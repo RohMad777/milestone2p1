@@ -4,7 +4,7 @@ import pickle
 
 # Create app
 app = Flask(__name__)
-model = pickle.load(open("model/model_rf_clf_rev.pkl", "rb"))
+model = pickle.load(open("model/model_decisiontree_clf.pkl", "rb"))
 
 
 @app.route("/")
@@ -18,7 +18,7 @@ def predict():
     features = [np.array(float_features)]
     prediction = model.predict(features)
 
-    output = {0: "No Deposit", 1: "Yes Deposit"}
+    output = {0: "Creditors are not credible", 1: "Credible creditor"}
 
     return render_template("predict.html",
                            prediction_text="{}".format(output[prediction[0]]))
@@ -26,7 +26,7 @@ def predict():
 
 @app.route('/data-set')
 def dataSet():
-    return render_template('bank_dataset.html')
+    return render_template('creditcard.html')
 
 
 @app.route('/predict')

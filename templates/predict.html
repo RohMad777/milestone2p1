@@ -3,75 +3,16 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
-            <h2 class="text-center fw-bolder">Prediction Subcribed</h2>
+            <h2 class="text-center fw-bolder">Prediction Credible Crediture</h2>
             <hr class="my-4">
-            <h4 class="text-center">Direct marketing campaigns phone calls of a Portuguese banking institution. 
-                The classification goal is to predict if the client will subscribe a term deposit</4>
+            <h4 class="text-center">Predictive accuracy of the estimated probability of default will be more valuable than the binary result of classification - credible or not credible clients.</4>
         </div>
     </div>
     <div class="container">
         <!-- Example row of columns -->
         <div class="row justify-content-center">
-            <div class="col-md-12 table-responsive">
-                <table class="table table-center table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Job</th>
-                        <th scope="col">Education</th>
-                        <th scope="col">Marital</th>
-                        <th scope="col">Housing</th>
-                        <th scope="col">Poutcome</th>
-                        <th scope="col">Loan</th>
-                        <th scope="col">Duration</th>
-                        <th scope="col">Previous</th>
-                        <th scope="col">Cons Conf Idx</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>57</td>
-                        <td>Services</td>
-                        <td>Married</td>
-                        <td>HighSchool</td>
-                        <td>No</td>
-                        <td>Failure</td>
-                        <td>No</td>
-                        <td>149</td>
-                        <td>0</td>
-                        <td>-36.4</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>37</td>
-                        <td>Services</td>
-                        <td>Married</td>
-                        <td>HighSchool</td>
-                        <td>Yes</td>
-                        <td>Failure</td>
-                        <td>No</td>
-                        <td>226</td>
-                        <td>0</td>
-                        <td>-36.4</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>49</td>
-                        <td>Entrepreneur</td>
-                        <td>Married</td>
-                        <td>University Degree</td>
-                        <td>Unknown</td>
-                        <td>Nonexistent</td>
-                        <td>No</td>
-                        <td>1616</td>
-                        <td>0</td>
-                        <td>-36.4</td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>
+            
+            
         </div>
 <hr/>
 <h3 class="text-center">Input Feature</h3>
@@ -79,90 +20,76 @@
         <div class="row">
           
           <div class="col-md-6">
-            <label for="age" class="form-label">Age</label>
-            <input type="number" class="form-control" name="age" placeholder="Age" required="required" />
+            <label for="age" class="form-label">PAY_AMT_MEI</label>
+            <input type="number" class="form-control" name="PAY_AMT_MEI" placeholder="PAY_AMT_MEI" required="required" />
           </div>
           <div class="col-md-6">
-            <label for="job" class="form-label">Job</label>
-                      <select id="job" name="job" class="form-select" placeholder="Job" required="required">
-                        <option value="">--Select Job--</option>
-                        <option value="0">Admin</option>
-                        <option value="1">Blue Collar</option>
-                        <option value="2">Entrepreneur</option>
-                        <option value="3">Housemaid</option>
-                        <option value="4">Management</option>
-                        <option value="5">Retired</option>
-                        <option value="6">Self Employed</option>
-                        <option value="7">Services</option>
-                        <option value="8">Student</option>
-                        <option value="9">Technician</option>
-                        <option value="10">Unemployed</option>
-                        <option value="11">Unknown</option>
-                      </select>
+            <label for="age" class="form-label">PAY_AUG</label>
+            <input type="number" class="form-control" name="PAY_AUG" placeholder="PAY_AUG" required="required" />
           </div>
           <div class="col-md-6">
-            <label for="marital" class="form-label">Marital</label>
-                      <select id="marital" class="form-select" name="marital" placeholder="Marital" required="required">
-                        <option value="">--Select Marital--</option>
-                        <option value="0">Divorced</option>
-                        <option value="1">Married</option>
-                        <option value="2">Single</option>
-                        <option value="3">Unknown</option>
-                      </select>
+            <label for="age" class="form-label">PAY_AMT_APR</label>
+            <input type="number" class="form-control" name="PAY_AMT_APR" placeholder="PAY_AMT_APR" required="required" />
           </div>
           <div class="col-md-6">
-            <label for="education" class="form-label">Education</label>
-                      <select id="education" class="form-select" name="education" placeholder="Education" required="required">
-                        <option value="">--Select Education--</option>
-                        <option value="0">Highschool</option>
-                        <option value="1">Professional Course</option>
-                        <option value="2">University Degree</option>
-                      </select>
+            <label for="age" class="form-label">PAY_AMT_JUL</label>
+            <input type="number" class="form-control" name="PAY_AMT_JUL" placeholder="PAY_AMT_JUL" required="required" />
           </div>
 
           <div class="col-md-6">
-            <label for="housing" class="form-label">Housing</label>
-            <select id="housing" class="form-select" name="housing" placeholder="Housing" required="required">
-              <option value="">--Select Housing--</option>
-              <option value="0">No</option>
-              <option value="1">Yes</option>
-              <option value="2">Unknown</option>
+            <label for="age" class="form-label">PAY_AMT_AUG</label>
+            <input type="number" class="form-control" name="PAY_AMT_AUG" placeholder="PAY_AMT_AUG" required="required" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="age" class="form-label">BILL_AMT_JUN</label>
+            <input type="number" class="form-control" name="BILL_AMT_JUN" placeholder="BILL_AMT_JUN" required="required" />
             </select>
           </div>
 
           <div class="col-md-6">
-            <label for="poutcome" class="form-label">Poutcome</label>
-            <select id="poutcome" class="form-select" name="poutcome" placeholder="Poutcome" required="required">
-              <option value="">--Select Poutcome--</option>
-              <option value="0">Nonexistent</option>
-              <option value="1">Failure</option>
-              <option value="2">Success</option>
-            </select>
+            <label for="age" class="form-label">BILL_AMT_MEI</label>
+            <input type="number" class="form-control" name="BILL_AMT_MEI" placeholder="BILL_AMT_MEI" required="required" />
           </div>
 
           <div class="col-md-6">
-            <label for="loan" class="form-label">Loan</label>
-                      <select id="loan" class="form-select" name="loan", placeholder="Loan", required="required">
-                        <option value="">--Select Loan--</option>
-                        <option value="0">No</option>
-                        <option value="1">Yes</option>
-                        <option value="2">Unknown</option>
-                      </select>
+            <label for="age" class="form-label">BILL_AMT_APR</label>
+            <input type="number" class="form-control" name="BILL_AMT_APR" placeholder="BILL_AMT_APR" required="required" />
           </div>
 
           <div class="col-md-6">
-            <label for="duration" class="form-label">Duration</label>
-            <input type="number" class="form-control"  name="duration" placeholder="Duration" required="required" />
-          </div>
-
-          <div class="col-md-6">
-            <label for="previous" class="form-label">Previous</label>
-                      <input type="number" class="form-control"  name="previous" placeholder="Previous" required="required" />
+            <label for="age" class="form-label">PAY_AMT_SEPT</label>
+            <input type="number" class="form-control" name="PAY_AMT_SEPT" placeholder="PAY_AMT_SEPT" required="required" />
           </div>
 
           <div class="col-md-6 mb-3">
-            <label for="const" class="form-label">Cons Conft Idx</label>
-            <input type="number" class="form-control"  name="cons_conf_idx" placeholder="Cons Conf Idx" required="required" />
+            <label for="age" class="form-label">BILL_AMT_JUL</label>
+            <input type="number" class="form-control" name="BILL_AMT_JUL" placeholder="BILL_AMT_JUL" required="required" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="age" class="form-label">BILL_AMT_AUG</label>
+            <input type="number" class="form-control" name="BILL_AMT_AUG" placeholder="BILL_AMT_AUG" required="required" />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="age" class="form-label">LIMIT_BAL</label>
+            <input type="number" class="form-control" name="LIMIT_BAL" placeholder="LIMIT_BAL" required="required" />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="age" class="form-label">BILL_AMT_SEPT</label>
+            <input type="number" class="form-control" name="BILL_AMT_SEPT" placeholder="BILL_AMT_SEPT" required="required" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="age" class="form-label">AGE</label>
+            <input type="number" class="form-control" name="AGE" placeholder="AGE" required="required" />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="age" class="form-label">PAY_SEPT</label>
+            <input type="number" class="form-control" name="PAY_SEPT" placeholder="PAY_SEPT" required="required" />
           </div>
 
           <div class="col-md-12 mb-4">

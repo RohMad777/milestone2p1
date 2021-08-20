@@ -1,166 +1,103 @@
 {% extends 'layout.html' %} {% block title %} Home {% endblock %} {% block body
 %}
 <!-- Main jumbotron for a primary marketing message or call to action -->
-
 <div class="container mb-6">
-    <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <button class="nav-link active" id="nav-data-tab" data-bs-toggle="tab" data-bs-target="#nav-data" type="button" role="tab" aria-controls="nav-data" aria-selected="true">Dataset</button>
-          <button class="nav-link" id="nav-feature-tab" data-bs-toggle="tab" data-bs-target="#nav-feature" type="button" role="tab" aria-controls="nav-feature" aria-selected="false">Feature Importen</button>
-          <button class="nav-link" id="nav-confession-tab" data-bs-toggle="tab" data-bs-target="#nav-confession" type="button" role="tab" aria-controls="nav-confession" aria-selected="false">Confession Matrix</button>
-          <button class="nav-link" id="nav-prediction-tab" data-bs-toggle="tab" data-bs-target="#nav-prediction" type="button" role="tab" aria-controls="nav-prediction" aria-selected="false">Prediction</button>
-          <button class="nav-link" id="nav-other-tab" data-bs-toggle="tab" data-bs-target="#nav-other" type="button" role="tab" aria-controls="nav-other" aria-selected="false">Other Project</button>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{url_for('static', filename='assets/images/img_1.png')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static', filename='assets/images/img_2.png')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static', filename='assets/images/img_3.png')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+          
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+<div class="container mb-6">
+    <div class="row">
+        <div class="col 12">
+            <p class="text-center fs-6 fw-bold">Predictive accuracy of the estimated probability of default will be more valuable than the binary result of classification - credible or not credible clients.</p>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col 12">
 
         </div>
-      </nav>
-      <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
-            <div class="row">
-                <div class="col 12">
-                    <div class="card">
-                        <h5 class="card-header">Dataset</h5>
-                        <div class="card-body">
-                          
-                        </div>
+    </div>
+    <div class="row">
+        <div class="col 12">
+        </div>
+    </div>
+</div>
+<div class="container mt-6">
+    <!-- Example row of columns -->
+    <div class="row d-sm-flex">
+        <div class="col-md-6 mt-3">
+            <div class="card text-black text-center " style="max-width: 30rem;">
+                <h5 class="card-header">
+                Prediction
+                </h5>
+                <img src="{{url_for('static', filename='assets/images/img_predicts.png')}}" class="card-img-top" alt="..." width="100%" />
+                <div class="card-body">
+                    <p class="card-text">
+                        Predicted Model using Random Forest.
+                    </p>
+                    <div class="card-footer">
+                        <a href="/predict" class="btn btn-primary">Go Prediction</a>
                       </div>
+                   
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="nav-feature" role="tabpanel" aria-labelledby="nav-feature-tab">Feature</div>
-        <div class="tab-pane fade" id="nav-confession" role="tabpanel" aria-labelledby="nav-confession-tab">Confession</div>
-        <div class="tab-pane fade" id="nav-prediction" role="tabpanel" aria-labelledby="nav-prediction-tab" href="/home">
-            <div class="card">
-                <h5 class="card-header">Prediction</h5>
+        <div class="col-md-6 mt-3">
+            <div class="card text-center" style="width: 30rem">
+                <h5 class="card-header">
+                    Data Summary
+                </h5>
+                <img src="{{url_for('static', filename='assets/images/img_data.png')}}" class="card-img-top" alt="..." width="100%" />
                 <div class="card-body">
-                    <form action="{{ url_for('predict')}}"method="post">
-                        <div class="row">
-                          
-                          <div class="col-md-6">
-                            <label for="age" class="form-label">Age</label>
-                            <input type="number" class="form-control" name="age" placeholder="Age" required="required" />
-                          </div>
-                          <div class="col-md-6">
-                            <label for="job" class="form-label">Job</label>
-                                      <select id="job" name="job" class="form-select" placeholder="Job" required="required">
-                                        <option value="">--Select Job--</option>
-                                        <option value="0">Admin</option>
-                                        <option value="1">Blue Collar</option>
-                                        <option value="2">Entrepreneur</option>
-                                        <option value="3">Housemaid</option>
-                                        <option value="4">Management</option>
-                                        <option value="5">Retired</option>
-                                        <option value="6">Self Employed</option>
-                                        <option value="7">Services</option>
-                                        <option value="8">Student</option>
-                                        <option value="9">Technician</option>
-                                        <option value="10">Unemployed</option>
-                                        <option value="11">Unknown</option>
-                                      </select>
-                          </div>
-                          <div class="col-md-6">
-                            <label for="marital" class="form-label">Marital</label>
-                                      <select id="marital" class="form-select" name="marital" placeholder="Marital" required="required">
-                                        <option value="">--Select Marital--</option>
-                                        <option value="0">Divorced</option>
-                                        <option value="1">Married</option>
-                                        <option value="2">Single</option>
-                                        <option value="3">Unknown</option>
-                                      </select>
-                          </div>
-                          <div class="col-md-6">
-                            <label for="education" class="form-label">Education</label>
-                                      <select id="education" class="form-select" name="education" placeholder="Education" required="required">
-                                        <option value="">--Select Education--</option>
-                                        <option value="0">Highschool</option>
-                                        <option value="1">Professional Course</option>
-                                        <option value="2">University Degree</option>
-                                      </select>
-                          </div>
-                
-                          <div class="col-md-6">
-                            <label for="housing" class="form-label">Housing</label>
-                            <select id="housing" class="form-select" name="housing" placeholder="Housing" required="required">
-                              <option value="">--Select Housing--</option>
-                              <option value="0">No</option>
-                              <option value="1">Yes</option>
-                              <option value="2">Unknown</option>
-                            </select>
-                          </div>
-                
-                          <div class="col-md-6">
-                            <label for="poutcome" class="form-label">Poutcome</label>
-                            <select id="poutcome" class="form-select" name="poutcome" placeholder="Poutcome" required="required">
-                              <option value="">--Select Poutcome--</option>
-                              <option value="0">Nonexistent</option>
-                              <option value="1">Failure</option>
-                              <option value="2">Success</option>
-                            </select>
-                          </div>
-                
-                          <div class="col-md-6">
-                            <label for="loan" class="form-label">Loan</label>
-                                      <select id="loan" class="form-select" name="loan", placeholder="Loan", required="required">
-                                        <option value="">--Select Loan--</option>
-                                        <option value="0">No</option>
-                                        <option value="1">Yes</option>
-                                        <option value="2">Unknown</option>
-                                      </select>
-                          </div>
-                
-                          <div class="col-md-6">
-                            <label for="duration" class="form-label">Duration</label>
-                            <input type="number" class="form-control"  name="duration" placeholder="Duration" required="required" />
-                          </div>
-                
-                          <div class="col-md-6">
-                            <label for="previous" class="form-label">Previous</label>
-                                      <input type="number" class="form-control"  name="previous" placeholder="Previous" required="required" />
-                          </div>
-                
-                          <div class="col-md-6 mb-3">
-                            <label for="const" class="form-label">Cons Conft Idx</label>
-                            <input type="number" class="form-control"  name="cons_conf_idx" placeholder="Cons Conf Idx" required="required" />
-                          </div>
-                
-                          <div class="col-md-12 mb-4">
-                            <div class="d-grid mx-auto">
-                              <button type="submit" class="btn btn-primary btn-block btn-lg">Prediction</button>
-                            </div>
-                          </div>
-                        </form>
-
-                        <div class="card-footer text-muted">  
-                        <div class="col-md-12 mb-4 text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                              <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-                              </symbol>
-                            </svg>
-                            <div class="alert alert-primary d-flex align-items-center text-center" role="alert">
-                              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-                              <div class="fw-bold ">
-                                Result Prediction: {{prediction_text}}
-                              </div>
-                            </div>
-                            </div>
-                        </div>
-
+                    <p class="card-text">
+                        Summary dataset, will showing information about data.
+                    </p>
+                    <div class="card-footer">
+                        <a href="/data-set" class="btn btn-primary">Go Data Summary</a>
+                    </div>
+                   
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
-    <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">Other Project</div>
-    <div class="row">
-        <div class="col 12">
 
-    </div>
     <div class="row">
-        <div class="col 12">
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="col 12">
+        <div class="col-md-12 bg-light mt-4 pt-2">
+            <p class="text-center">© Copyright by RohMad - 2021</p>
         </div>
     </div>
 </div>
