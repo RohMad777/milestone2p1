@@ -3,7 +3,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
-            <h2 class="text-center fw-bolder">Prediction Credible Crediture</h2>
+            <h2 class="text-center fw-bolder txt-head">Prediction Credible Crediture</h2>
             <hr class="my-4">
             <h4 class="text-center">Predictive accuracy of the estimated probability of default will be more valuable than the binary result of classification - credible or not credible clients.</4>
         </div>
@@ -15,91 +15,124 @@
             
         </div>
 <hr/>
-<h3 class="text-center">Input Feature</h3>
-          <form action="{{ url_for('predict')}}"method="post">
-        <div class="row">
-          
-          <div class="col-md-6">
-            <label for="age" class="form-label">PAY_AMT_MEI</label>
-            <input type="number" class="form-control" name="PAY_AMT_MEI" placeholder="PAY_AMT_MEI" required="required" />
-          </div>
-          <div class="col-md-6">
-            <label for="age" class="form-label">PAY_AUG</label>
-            <input type="number" class="form-control" name="PAY_AUG" placeholder="PAY_AUG" required="required" />
-          </div>
-          <div class="col-md-6">
-            <label for="age" class="form-label">PAY_AMT_APR</label>
-            <input type="number" class="form-control" name="PAY_AMT_APR" placeholder="PAY_AMT_APR" required="required" />
-          </div>
-          <div class="col-md-6">
-            <label for="age" class="form-label">PAY_AMT_JUL</label>
-            <input type="number" class="form-control" name="PAY_AMT_JUL" placeholder="PAY_AMT_JUL" required="required" />
-          </div>
 
-          <div class="col-md-6">
-            <label for="age" class="form-label">PAY_AMT_AUG</label>
-            <input type="number" class="form-control" name="PAY_AMT_AUG" placeholder="PAY_AMT_AUG" required="required" />
-          </div>
+<div class="card">
+  <h4 class="card-header p-3">Input Featured
+  </h4>
+  <div class="card-body">
+    <form action="{{ url_for('predict')}}"method="post">
+  <div class="row">
 
-          <div class="col-md-6">
-            <label for="age" class="form-label">BILL_AMT_JUN</label>
-            <input type="number" class="form-control" name="BILL_AMT_JUN" placeholder="BILL_AMT_JUN" required="required" />
+    <div class="col-md-4 mb-3">
+      <label for="age" class="form-label">Repayment status September</label>
+      <select id="pay-sept" class="form-select" name="PAY_SEPT" required="required">
+        <option value="">--Select Repayment--</option>
+        <option value="-1">Pay duly</option>
+        <option value="1">Payment delay for 1 month</option>
+        <option value="2">Payment delay for 2 month</option>
+        <option value="3">Payment delay for 3 month</option>
+        <option value="4">Payment delay for 4 month</option>
+        <option value="5">Payment delay for 5 month</option>
+        <option value="6">Payment delay for 6 month</option>
+        <option value="7">Payment delay for 7 month</option>
+        <option value="8">Payment delay for 8 month</option>
+        <option value="9">Payment delay for 9 months and above</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" class="form-control" name="AGE" placeholder="0" required="required" />
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="age" class="form-label">Amount of Bill September</label>
+      <input type="number" class="form-control" name="BILL_AMT_SEPT" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="age" class="form-label">Limit Balanced</label>
+      <input type="number" class="form-control" name="LIMIT_BAL" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount of Bill August</label>
+      <input type="number" class="form-control" name="BILL_AMT_AUG" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="age" class="form-label">Amount of Bill July</label>
+      <input type="number" class="form-control" name="BILL_AMT_JUL" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount of Bill April</label>
+      <input type="number" class="form-control" name="BILL_AMT_APR" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount of Payment September</label>
+      <input type="number" class="form-control" name="PAY_AMT_SEPT" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount of Bill Mei</label>
+      <input type="number" class="form-control" name="BILL_AMT_MEI" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount of Bill June</label>
+      <input type="number" class="form-control" name="BILL_AMT_JUN" placeholder="0.0" step=".01" required="required" />
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount of Payment August</label>
+      <input type="number" class="form-control" name="PAY_AMT_AUG" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount of Payment July</label>
+      <input type="number" class="form-control" name="PAY_AMT_JUL" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount of Payment April</label>
+      <input type="number" class="form-control" name="PAY_AMT_APR" placeholder="0.0" step=".01" required="required" />
+    </div>
+
+    <div class="col-md-4">
+      <label for="age" class="form-label">Amount Payment Mei</label>
+      <input type="number" class="form-control" name="PAY_AMT_MEI" placeholder="0.0" step=".01" required="required" />
+    </div>
+    <div class="col-md-4">
+      <label for="age" class="form-label">Repayment status August</label>
+      <select id="pay-aug" class="form-select" name="PAY_AUG" required="required">
+              <option value="">--Select Repayment--</option>
+              <option value="-1">Pay duly</option>
+              <option value="1">Payment delay for 1 month</option>
+              <option value="2">Payment delay for 2 month</option>
+              <option value="3">Payment delay for 3 month</option>
+              <option value="4">Payment delay for 4 month</option>
+              <option value="5">Payment delay for 5 month</option>
+              <option value="6">Payment delay for 6 month</option>
+              <option value="7">Payment delay for 7 month</option>
+              <option value="8">Payment delay for 8 month</option>
+              <option value="9">Payment delay for 9 months and above</option>
             </select>
-          </div>
+    </div>
+ 
+    
+  </div>
+  <div class="card-footer">
+    <div class="d-grid mx-auto">
+      <button type="submit" class="btn btn-primary btn-block btn-lg">Prediction</button>
+    </div>
+  </div>
+</form>
+</div>
 
-          <div class="col-md-6">
-            <label for="age" class="form-label">BILL_AMT_MEI</label>
-            <input type="number" class="form-control" name="BILL_AMT_MEI" placeholder="BILL_AMT_MEI" required="required" />
-          </div>
-
-          <div class="col-md-6">
-            <label for="age" class="form-label">BILL_AMT_APR</label>
-            <input type="number" class="form-control" name="BILL_AMT_APR" placeholder="BILL_AMT_APR" required="required" />
-          </div>
-
-          <div class="col-md-6">
-            <label for="age" class="form-label">PAY_AMT_SEPT</label>
-            <input type="number" class="form-control" name="PAY_AMT_SEPT" placeholder="PAY_AMT_SEPT" required="required" />
-          </div>
-
-          <div class="col-md-6 mb-3">
-            <label for="age" class="form-label">BILL_AMT_JUL</label>
-            <input type="number" class="form-control" name="BILL_AMT_JUL" placeholder="BILL_AMT_JUL" required="required" />
-          </div>
-
-          <div class="col-md-6">
-            <label for="age" class="form-label">BILL_AMT_AUG</label>
-            <input type="number" class="form-control" name="BILL_AMT_AUG" placeholder="BILL_AMT_AUG" required="required" />
-          </div>
-
-          <div class="col-md-6 mb-3">
-            <label for="age" class="form-label">LIMIT_BAL</label>
-            <input type="number" class="form-control" name="LIMIT_BAL" placeholder="LIMIT_BAL" required="required" />
-          </div>
-
-          <div class="col-md-6 mb-3">
-            <label for="age" class="form-label">BILL_AMT_SEPT</label>
-            <input type="number" class="form-control" name="BILL_AMT_SEPT" placeholder="BILL_AMT_SEPT" required="required" />
-          </div>
-
-          <div class="col-md-6">
-            <label for="age" class="form-label">AGE</label>
-            <input type="number" class="form-control" name="AGE" placeholder="AGE" required="required" />
-          </div>
-
-          <div class="col-md-6 mb-3">
-            <label for="age" class="form-label">PAY_SEPT</label>
-            <input type="number" class="form-control" name="PAY_SEPT" placeholder="PAY_SEPT" required="required" />
-          </div>
-
-          <div class="col-md-12 mb-4">
-            <div class="d-grid mx-auto">
-              <button type="submit" class="btn btn-primary btn-block btn-lg">Prediction</button>
-            </div>
-          </div>
-        </form>
-
-        <div class="col-md-12 mb-4 text-center">
+        <div class="card-footer">
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
           <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
@@ -114,5 +147,7 @@
         </div>
         
     </div>
+</div>
+{% include 'includes/_footer.html' %}
     {% endblock %}
     

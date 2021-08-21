@@ -1,23 +1,38 @@
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Credible Crediture Prediction</a>
+      <a class="navbar-navbar-brand fw-bold fs-3 fst-italic text-decoration-none txt-head" href="/">
+        <img src="{{url_for('static', filename='assets/images/logo.png')}}" alt="" width="30" height="24" class="d-inline-block align-text-top ">
+        Credible Clients Prediction
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href="/"></a>
           </li>
         </ul>
         <div class="d-flex">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="btn btn-outline-primary" aria-current="page" type="button" href="/predict">Prediction</a>
-   
-              <a class="btn btn-outline-success" type="button" href="/data-set">Data Summary</a>
-            </li>
+            <div class="dropdown dropstart">
+              <a class="btn btn-outline-primary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown Menu
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/">Home</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/data-set">Data Summary</a></li>
+                <li><a class="dropdown-item" href="/feature">Feature</a></li>
+                <li><a class="dropdown-item" href="/confuss">Classification</a></li>
+                <li><a class="dropdown-item" href="/predict">Prediction</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/other">Othe Projects</a></li>
+                <li><a class="dropdown-item" href="https://github.com/RohMad777" target="_blank">GitHub</a></li>
+              </ul>
+            </div>
           </ul>
         </div>
       </div>

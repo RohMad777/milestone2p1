@@ -1,6 +1,23 @@
-.carousel-item{
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Staatliches&display=swap');
+
+.carousel-item {
     height: 400px;
-} 
-.carousel-item img{
+}
+
+.carousel-item img {
     height: 400px;
+}
+
+
+.footers {
+    font-family: 'Dancing Script', cursive;
+}
+
+.txt-head {
+    font-family: 'Staatliches', cursive;
+}
+
+.links {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
 }
